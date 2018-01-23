@@ -1,0 +1,98 @@
+{
+    "TRENDS": [
+{  
+   "allTrends":1380,
+   "allSolutions":305,
+   "mostConnectedTrends":[  
+      {  
+         "id":387921,
+         "name":"Mixed Reality"
+      },
+      {  
+         "id":2747,
+         "name":"Internet of Things"
+      },
+      {  
+         "id":3986,
+         "name":"Robotic Process Automation"
+      },
+      {  
+         "id":2942,
+         "name":"Augmented Reality"
+      },
+      {  
+         "id":375856,
+         "name":"3D printing "
+      }
+   ],
+   "mostReferencedTrends":[  
+      {  
+         "id":2942,
+         "name":"Augmented Reality"
+      },
+      {  
+         "id":2747,
+         "name":"Internet of Things"
+      },
+      {  
+         "id":2734,
+         "name":"Banks entering other sectors, e.g. retail"
+      },
+      {  
+         "id":2737,
+         "name":"Crypto/Digital currencies and payment methods"
+      },
+      {  
+         "id":2736,
+         "name":"Distributed Ledger Technology (DLT)"
+      }
+   ],
+   "industries":[  
+      {  
+         "name":"Public Sector",
+         "allTrends":258,
+         "allSolutions":94
+      },
+      {  
+         "name":"Banking & Capital Markets",
+         "allTrends":270,
+         "allSolutions":50
+      },
+      {  
+         "name":"Healthcare & Life Sciences",
+         "allTrends":123,
+         "allSolutions":61
+      },
+      {  
+         "name":"Energy",
+         "allTrends":260,
+         "allSolutions":36
+      },
+      {  
+         "name":"Communications, Media & Entertainment",
+         "allTrends":38,
+         "allSolutions":32
+      },
+      {  
+         "name":"Transportation",
+         "allTrends":117,
+         "allSolutions":17
+      },
+      {  
+         "name":"Consumer Industries & Retail",
+         "allTrends":265,
+         "allSolutions":17
+      },
+      {  
+         "name":"Pan Industry",
+         "allTrends":0,
+         "allSolutions":28
+      },
+      {  
+         "name":"Manufacturing",
+         "allTrends":249,
+         "allSolutions":60
+      }
+   ]
+}
+]}

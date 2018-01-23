@@ -1,41 +1,33 @@
-var textX=30;
-var textY=40;
+var worddata;
+
 function preload(){
   //var words = ["Saab", "Volvo", "BMW"];
-  data = loadJSON("files/words.json")
+  data = loadJSON("files/words.json", gotdata)
 }
 
 function setup() { 
-    createCanvas(640, 700);
-  } 
-  
+    createCanvas(600,600);
+    background (0);
 
-  function draw() { 
-
-    background(50);
-    textSize(72);
-    textAlign(CENTER, CENTER);
-    //for (var i = 0; i < words.length; i++) {
-    //  fill(random(255));
-    //  text(words[i], random(width), random(height));
-   // }
-
-var mywords=data.words;    
+    var mywords=worddata.words;    
     
-for (var i = 0; i < mywords.length; i++ ) {
-  fill(random(255));
+for (var i = 0; i < mywords.length; i++ )
+{ 
   
-  var wordCount=mywords[i].count;
-  for (var j = 0;j < wordCount.length; j++) {
-    textSize(wordCount[j]*10); 
-  }
-  textAlign(CENTER, CENTER);
-  text(mywords[i].word,textX,textY);
-  textX=textX+40
-  textY=textY+20
+    x = random(width*0.75);
+    y = random(height*0.75);
+   fill(random(255));
+    textSize(mywords[i].count*2);
+   text(mywords[i].word,x,y);
+  } 
+
 }
+
+  function gotdata(data){
+    worddata=data;
+  }
   
+  function draw() { 
 
 //end draw function
 }
-
