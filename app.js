@@ -25,36 +25,13 @@ app.get('/', function (req, res) {
     res.render('homepage')
 })
 
-app.get('/review', function (req, res) {
-
-    TopWordsQuery ="match (w:Word) return  w.name as Word, w.count as Count order by w.count desc LIMIT 25";
- session 
-    .run(TopWordsQuery)
-
-
-    .then(function(result,returnVar){
-        var nodeArr =[];
-        result.records.forEach(function(record) {
-                nodeArr.push({
-                    id: record._fields[0].identity.low,
-                    name: record._fields[0].properties.name,
-                    description: record._fields[0].properties.description,
-                });
-        }); 
-        res.render('review',{Transcripts: nodeArr});
-    })
-    .catch(function(err){
-        console.log(err)
-    })
-})
-
 app.get('/about', function (req, res) {
   res.render('about')
 })
 
 app.get('/WordCloud', function (req, res) {
     var CountArr =[];
-    var TopWordsQuery ="match (w:Word) return  w.name as Word, w.count as Count order by w.count desc LIMIT 25";
+    var TopWordsQuery ="match (w:Word) return  w.name as Word, w.count as Count order by w.count desc LIMIT 10";
     session 
        .run(TopWordsQuery)
        
