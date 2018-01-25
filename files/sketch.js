@@ -20,13 +20,7 @@ for (var i = 0; i < MyWordlist.length; i++ )
     y = random(height*0.75);
    fill(random(255));
   var sizes=MyWordlist[i].count;
-  for (var j = 0;j < sizes.length; j++)
-  {
-   console.log('*');
-   textSize(sizes[j].low);
-  }
-
-  //textSize(MyWordlist[i].word*2);
+  textSize(map(sizes.low, 0, 20, 5,50));
   text(MyWordlist[i].word,x,y);
   } 
 }
