@@ -5,6 +5,13 @@
   </head>
   <body>
 
+    <script>
+      //passes local object array to Server object
+      //ignore the warning in the editor
+       var MyWordlist = <%- JSON.stringify(WordsList) %>
+       console.log (MyWordlist);
+    </script>
+
 <script src="files/sketch.js"></script>
 
   </body>

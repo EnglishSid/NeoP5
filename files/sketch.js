@@ -1,33 +1,37 @@
-var worddata;
+
+particles = [];
+//var worddata;
+//data = MyWordlist;
 
 function preload(){
-  //var words = ["Saab", "Volvo", "BMW"];
-  data = loadJSON("files/words.json", gotdata)
+  //data = loadJSON("files/words.json", gotdata)
+  //data = MyWordsList;
 }
 
 function setup() { 
     createCanvas(600,600);
     background (0);
 
-    var mywords=worddata.words;    
+//    var mywords=MyWordlist.words;    
     
-for (var i = 0; i < mywords.length; i++ )
-{ 
-  
+for (var i = 0; i < MyWordlist.length; i++ )
+{
     x = random(width*0.75);
     y = random(height*0.75);
    fill(random(255));
-    textSize(mywords[i].count*2);
-   text(mywords[i].word,x,y);
-  } 
+  var sizes=MyWordlist[i].count;
+  for (var j = 0;j < sizes.length; j++)
+  {
+   console.log('*');
+   textSize(sizes[j].low);
+  }
 
+  //textSize(MyWordlist[i].word*2);
+  text(MyWordlist[i].word,x,y);
+  } 
 }
 
   function gotdata(data){
     worddata=data;
+    WordsList=data;
   }
-  
-  function draw() { 
-
-//end draw function
-}
